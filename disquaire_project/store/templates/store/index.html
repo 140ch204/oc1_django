@@ -1,9 +1,9 @@
 {% extends 'store/base.html' %}
 
-{% block content %}
+    {% block content %}
 
-Je me suis faufilé dans le gabarit parent. Salut !
+        {% include 'store/list.html' with list_title='Nos derniers disques' %}
 
-{% include 'store/list.html' %}
+    {% include 'store/list.html' %}
 
 {% endblock %}
