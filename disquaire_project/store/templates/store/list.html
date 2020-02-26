@@ -1,0 +1,8 @@
+<ul>
+  {% for album in albums %}
+    <a href="{% url 'detail' album_id=album.id %}">
+      <img class="img-responsive" src="{{ album.picture }}" alt="{{ album.title }}">
+    </a>
+    <li>{{ album.title }}</li>
+  {% endfor %}
+</ul>
