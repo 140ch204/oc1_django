@@ -40,7 +40,7 @@ class Album(models.Model):
     picture = models.URLField()
     artists = models.ManyToManyField(Artist, related_name='albums', blank=True)
     def __str__(self):
-        return self.name
+        return self.title
 
 class Booking(models.Model):
     created_at = models.DateTimeField(auto_now_add=True)
