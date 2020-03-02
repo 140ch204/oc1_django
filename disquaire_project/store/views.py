@@ -34,7 +34,6 @@ def search(request):
     if not query:
         albums = Album.objects.all()
     else:
-        # title contains the query is and query is not sensitive to case.
         albums = Album.objects.filter(title__icontains=query)
     if not albums.exists():
         albums = Album.objects.filter(artists__name__icontains=query)
