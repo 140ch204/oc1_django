@@ -49,4 +49,4 @@ class Booking(models.Model):
     contact = models.ForeignKey(Contact, on_delete=models.CASCADE)
 
     def __str__(self):
-        return self.name
+        return self.contact.name
